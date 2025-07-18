@@ -32,5 +32,5 @@ COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
 # Mở cổng 8080
 EXPOSE 8080
 
-# Lệnh khởi động máy chủ Tomcat
-CMD ["catalina.sh", "run"]
+# Lệnh khởi động máy chủ Tomcat với đường dẫn đầy đủ
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
